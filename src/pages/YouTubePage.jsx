@@ -1,4 +1,5 @@
 import useSEO from '../hooks/useSEO'
+import { Bell } from 'lucide-react'
 import { useState } from 'react'
 import PageHero from '../components/PageHero'
 import OrderModal from '../components/OrderModal'
@@ -40,7 +41,7 @@ const FEATURES = [
   { icon: <PlayIcon />, title: 'Real YouTube Views', desc: 'Drive genuine views from real YouTube users — boosting watch time, engagement, and channel authority.' },
   { icon: <TrendingUpIcon />, title: 'Subscriber Growth', desc: 'Grow your subscriber base with targeted campaigns reaching fans who love your music genre.' },
   { icon: <TargetIcon />, title: 'Audience Targeting', desc: 'Target viewers by genre, region, age, and listening habits for maximum engagement rates.' },
-  { icon: '🔔', title: 'Algorithm Signals', desc: 'Strategic watch patterns that signal strong content quality to the YouTube algorithm.' },
+  { icon: <Bell size={22} strokeWidth={2} />, title: 'Algorithm Signals', desc: 'Strategic watch patterns that signal strong content quality to the YouTube algorithm.' },
   { icon: <BarChartIcon />, title: 'Analytics Report', desc: 'Detailed campaign report showing view growth, retention rates, and channel improvements.' },
   { icon: <ShieldIcon />, title: 'ToS Compliant', desc: 'Fully compliant with YouTube\'s guidelines. No bots, no click farms — only real engagement.' },
 ]

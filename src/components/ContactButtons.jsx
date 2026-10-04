@@ -56,7 +56,7 @@ export default function ContactButtons({ className = '' }) {
         WhatsApp Us
       </a>
 
-      {/* Telegram button — only renders once TELEGRAM_USERNAME is configured on Netlify */}
+      {/* Telegram button — only renders once TELEGRAM_LINK is configured on Netlify */}
       {telegramLink && (
         <a
           href={telegramLink}

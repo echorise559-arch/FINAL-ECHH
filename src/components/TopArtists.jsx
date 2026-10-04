@@ -1,4 +1,5 @@
 // Top 3 Promoted Artists — Echorise Media
+import { Medal } from 'lucide-react'
 
 const TrophyIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
@@ -33,7 +34,7 @@ const TOP_ARTISTS = [
     highlight: '"Golden Hour" — 757M+ streams',
     campaign: 'Spotify Premium Campaign',
     result: '+4.6B total streams',
-    badge: '🥈 #2 Artist',
+    badge: { icon: <Medal size={14} strokeWidth={2} aria-hidden="true" />, text: '#2 Artist' },
     accentColor: '#FF6A00',
   },
   {
@@ -47,7 +48,7 @@ const TOP_ARTISTS = [
     highlight: 'Emerging Artist — Pacific Region',
     campaign: 'Spotify Starter Campaign',
     result: 'Strong regional growth',
-    badge: '🥉 #3 Artist',
+    badge: { icon: <Medal size={14} strokeWidth={2} aria-hidden="true" />, text: '#3 Artist' },
     accentColor: '#ee0979',
   },
 ]

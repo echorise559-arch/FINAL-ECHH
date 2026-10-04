@@ -20,7 +20,8 @@ src/
     SpotifyCustomModal.jsx # Custom Spotify campaign request (Netlify Forms)
     PricingCard.jsx       # Reusable pricing card
     ReviewCard.jsx        # Review card with image, flag, stars, reply
-    TeamSection.jsx       # 8-person team grid with photos
+    TeamSection.jsx       # Team ledger by department (filterable; optional photo per member)
+    TrustSection.jsx      # "What you can count on" commitments + what happens after you order
     StatsBar.jsx          # Animated counter stats bar
     FAQSection.jsx        # Accordion FAQ
     PartnerLogos.jsx      # Platform partner logos
@@ -38,6 +39,18 @@ src/
   data/
     index.js              # All site data (reviews, packages, team, FAQ, countries)
 ```
+
+## Environment variables (Netlify)
+
+Set these in **Netlify → Site configuration → Environment variables**, then redeploy. All are optional — a button or icon simply stays hidden until its value is set.
+
+| Variable | Example | What it controls |
+|---|---|---|
+| `WHATSAPP_NUMBER` | `2348012345678` | WhatsApp buttons (digits only, with country code) |
+| `TELEGRAM_LINK` | `https://t.me/echorisemedia` | Telegram buttons (footer, contact page, team section). Change this value any time to update the link |
+| `TELEGRAM_USERNAME` | `echorisemedia` | Older alternative to `TELEGRAM_LINK`; only used if `TELEGRAM_LINK` is not set |
+| `TIKTOK_URL` | `https://tiktok.com/@echorisemedia` | TikTok icon in the footer |
+| `INSTAGRAM_URL` | `https://instagram.com/echorisemedia` | Instagram icon in the footer |
 
 ## Setup
 

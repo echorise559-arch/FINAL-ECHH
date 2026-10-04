@@ -15,10 +15,26 @@ import YouTubePage from './pages/YouTubePage'
 import AppleMusicPage from './pages/AppleMusicPage'
 import AIChatbot from './components/AIChatbot'
 import InvoicePage from './pages/InvoicePage'
+import LegalInfoPage from './pages/LegalInfoPage'
+import TermsPage from './pages/TermsPage'
+import PrivacyPage from './pages/PrivacyPage'
+import RefundPolicyPage from './pages/RefundPolicyPage'
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
-  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    // Links like /#team should scroll to that section; every other navigation goes to the top.
+    if (hash) {
+      const id = decodeURIComponent(hash.slice(1))
+      const t = setTimeout(() => {
+        const el = document.getElementById(id)
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        else window.scrollTo(0, 0)
+      }, 80)
+      return () => clearTimeout(t)
+    }
+    window.scrollTo(0, 0)
+  }, [pathname, hash])
   return null
 }
 
@@ -48,6 +64,10 @@ export default function App() {
         <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
         <Route path="/order" element={<Layout><OrderPage /></Layout>} />
         <Route path="/success" element={<Layout><SuccessPage /></Layout>} />
+        <Route path="/legal" element={<Layout><LegalInfoPage /></Layout>} />
+        <Route path="/terms" element={<Layout><TermsPage /></Layout>} />
+        <Route path="/privacy" element={<Layout><PrivacyPage /></Layout>} />
+        <Route path="/refund-policy" element={<Layout><RefundPolicyPage /></Layout>} />
         <Route path="*" element={<Layout><NotFound /></Layout>} />
         <Route path="/admin/invoice" element={<InvoicePage />} />
       </Routes>

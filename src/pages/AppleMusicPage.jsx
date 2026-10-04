@@ -1,4 +1,5 @@
 import useSEO from '../hooks/useSEO'
+import { ClipboardList, Bell } from 'lucide-react'
 import { useState } from 'react'
 import PageHero from '../components/PageHero'
 import OrderModal from '../components/OrderModal'
@@ -33,10 +34,10 @@ const TrendingUpIcon = () => (
 
 const FEATURES = [
   { icon: <AppleMusicIcon />, title: 'Apple Music Streams', desc: 'Drive real streams from genuine Apple Music listeners in your target markets and genres.' },
-  { icon: '📋', title: 'Playlist Pitching', desc: 'We pitch your track to Apple Music curators for editorial playlist consideration.' },
+  { icon: <ClipboardList size={22} strokeWidth={2} />, title: 'Playlist Pitching', desc: 'We pitch your track to Apple Music curators for editorial playlist consideration.' },
   { icon: <BarChartIcon />, title: 'Shazam Chart Push', desc: 'Strategic placements that boost your Shazam chart position and discovery rate.' },
   { icon: <GlobeIcon />, title: 'Geographic Targeting', desc: 'Target listeners in specific countries where your sound resonates most strongly.' },
-  { icon: '🔔', title: 'New Artist Spotlight', desc: 'Eligible artists get pitched to Apple\'s New Artist Spotlight editorial team.' },
+  { icon: <Bell size={22} strokeWidth={2} />, title: 'New Artist Spotlight', desc: 'Eligible artists get pitched to Apple\'s New Artist Spotlight editorial team.' },
   { icon: <TrendingUpIcon />, title: 'Analytics Report', desc: 'Full Apple Music for Artists report showing stream growth, listener territories, and more.' },
 ]
 

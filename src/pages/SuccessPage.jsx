@@ -1,4 +1,5 @@
 import { useLocation, Link } from 'react-router-dom'
+import { Check, ClipboardList, Download } from 'lucide-react'
 
 export default function SuccessPage() {
   const { state } = useLocation()
@@ -59,7 +60,7 @@ export default function SuccessPage() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-5 text-4xl"
             style={{ background: isPaid ? 'linear-gradient(135deg,rgba(16,185,129,0.2),rgba(16,185,129,0.05))' : 'linear-gradient(135deg,rgba(255,106,0,0.2),rgba(255,106,0,0.05))', border: isPaid ? '2px solid rgba(16,185,129,0.4)' : '2px solid rgba(255,106,0,0.4)' }}>
-            {isPaid ? '✓' : '📋'}
+            {isPaid ? <Check size={36} strokeWidth={2.4} aria-hidden="true" style={{ color: '#10B981' }} /> : <ClipboardList size={34} strokeWidth={2} aria-hidden="true" style={{ color: '#FF6A00' }} />}
           </div>
           <h1 className="font-display font-bold text-4xl text-gray-900 mb-3">
             {isPaid ? 'Payment Confirmed!' : 'Quote Request Received!'}
@@ -126,7 +127,7 @@ export default function SuccessPage() {
           <div className="mt-5 p-4 rounded-xl text-sm text-muted" style={{ background: isPaid ? 'rgba(16,185,129,0.07)' : 'rgba(255,106,0,0.06)', border: isPaid ? '1px solid rgba(16,185,129,0.15)' : '1px solid rgba(255,106,0,0.18)' }}>
             {isPaid
               ? <>✓ Payment processed securely via our secure payment gateway &nbsp;·&nbsp; A receipt has been sent to <strong className="text-gray-900">{orderData.email}</strong> &nbsp;·&nbsp; Campaign begins within 24–48 hours.</>
-              : <>📋 Quote request received &nbsp;·&nbsp; Our team will contact <strong className="text-gray-900">{orderData.email}</strong> within 24 hours with a custom offer.</>
+              : <><ClipboardList size={14} strokeWidth={2.2} aria-hidden="true" style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} /> Quote request received &nbsp;·&nbsp; Our team will contact <strong className="text-gray-900">{orderData.email}</strong> within 24 hours with a custom offer.</>
             }
           </div>
         </div>
@@ -134,7 +135,7 @@ export default function SuccessPage() {
         {/* Actions */}
         <div className="flex gap-4 flex-wrap">
           {isPaid && (
-            <button onClick={handleDownload} className="btn-outline flex-1 justify-center">⬇ Download Receipt</button>
+            <button onClick={handleDownload} className="btn-outline flex-1 justify-center"><Download size={16} strokeWidth={2.2} aria-hidden="true" /> Download Receipt</button>
           )}
           <Link to="/" className="btn-primary flex-1 justify-center">Back to Home →</Link>
         </div>

@@ -43,9 +43,9 @@ export const SPOTIFY_PACKAGES = [
   {
     id: 'growth',
     name: 'Growth',
-    price: 100,
-    listeners: '22,000',
-    features: ['22,000 targeted listeners', 'Advanced genre targeting', 'Real, active Spotify users', 'Campaign live within 24hrs', 'Algorithm boost strategy', 'Detailed analytics report'],
+    price: 150,
+    listeners: '30,000',
+    features: ['30,000 targeted listeners', 'Advanced genre targeting', 'Real, active Spotify users', 'Campaign live within 24hrs', 'Algorithm boost strategy', 'Detailed analytics report'],
     popular: true,
     cta: 'Get Started',
     paymentLink: 'https://nestuge.com/echorise2',
@@ -53,9 +53,9 @@ export const SPOTIFY_PACKAGES = [
   {
     id: 'premium',
     name: 'Premium',
-    price: 350,
-    listeners: '60,000',
-    features: ['60,000 targeted listeners', 'Multi-genre & global reach', 'Real, active Spotify users', 'Campaign live within 12hrs', 'Full viral push strategy', 'Priority support & updates', 'Post-campaign consultation'],
+    price: 190,
+    listeners: '40,000',
+    features: ['40,000 targeted listeners', 'Multi-genre & global reach', 'Real, active Spotify users', 'Campaign live within 12hrs', 'Full viral push strategy', 'Priority support & updates', 'Post-campaign consultation'],
     popular: false,
     cta: 'Get Started',
     paymentLink: 'https://nestuge.com/echorise3',
@@ -76,9 +76,9 @@ export const SOUNDCLOUD_PACKAGES = [
   {
     id: 'sc-growth',
     name: 'Growth',
-    price: 100,
-    listeners: '22,000',
-    features: ['22,000 targeted plays', 'Advanced genre targeting', 'Real SoundCloud accounts', 'Follower growth included', 'Priority channel placement', 'Detailed analytics report'],
+    price: 150,
+    listeners: '30,000',
+    features: ['30,000 targeted plays', 'Advanced genre targeting', 'Real SoundCloud accounts', 'Follower growth included', 'Priority channel placement', 'Detailed analytics report'],
     popular: true,
     cta: 'Get Started',
     paymentLink: 'https://nestuge.com/echorise2',
@@ -86,9 +86,9 @@ export const SOUNDCLOUD_PACKAGES = [
   {
     id: 'sc-premium',
     name: 'Premium',
-    price: 350,
-    listeners: '60,000',
-    features: ['60,000 targeted plays', 'Multi-genre audience reach', 'Real SoundCloud accounts', 'Accelerated follower growth', 'Premium reposts network', 'Priority support & updates', 'Post-campaign consultation'],
+    price: 190,
+    listeners: '40,000',
+    features: ['40,000 targeted plays', 'Multi-genre audience reach', 'Real SoundCloud accounts', 'Accelerated follower growth', 'Premium reposts network', 'Priority support & updates', 'Post-campaign consultation'],
     popular: false,
     cta: 'Get Started',
     paymentLink: 'https://nestuge.com/echorise3',
@@ -172,6 +172,11 @@ export const DANCE_PACKAGES = [
 ]
 
 // ─── TEAM ────────────────────────────────────────────────────────────────────
+// Each member: { initials, name, role, dept, gradient, photo? }
+//  • `dept` must match one of the names in TEAM_DEPARTMENTS below.
+//  • `photo` is optional — add a URL (e.g. '/team/james-simon.jpg' placed in /public/team/)
+//    and a small round headshot appears next to that person's name. Real photos are the
+//    single biggest trust signal, so add them when you can. Leave it out and nothing breaks.
 export const TEAM = [
   // Leadership
   { initials: 'DA', name: 'David Andrew',       role: 'Founder & Director',    dept: 'Leadership',            gradient: 'from-[#3D2B1A] to-[#1A1A1A]' },
@@ -184,6 +189,7 @@ export const TEAM = [
   { initials: 'KA', name: 'Kainks Andrew',      role: 'Campaign Manager',      dept: 'Campaign Management',   gradient: 'from-teal-500 to-emerald-700' },
   { initials: 'AJ', name: 'Alfred Joseph',      role: 'Campaign Manager',      dept: 'Campaign Management',   gradient: 'from-orange-500 to-amber-600' },
   { initials: 'JM', name: 'Julius Mavvy',       role: 'Campaign Manager',      dept: 'Campaign Management',   gradient: 'from-red-500 to-rose-700' },
+  { initials: 'MJ', name: 'Mark Johnson',       role: 'Campaign Manager',      dept: 'Campaign Management',   gradient: 'from-blue-500 to-indigo-700' },
 
   // Audience Growth
   { initials: 'MD', name: 'Micheal Damina',     role: 'Audience Growth',       dept: 'Audience Growth',       gradient: 'from-lime-500 to-green-600' },
@@ -194,6 +200,7 @@ export const TEAM = [
   { initials: 'VS', name: 'Victor Street',      role: 'Audience Growth',       dept: 'Audience Growth',       gradient: 'from-[#FF6A00] to-[#4B3F72]' },
   { initials: 'VW', name: 'Victor Walker',      role: 'Audience Growth',       dept: 'Audience Growth',       gradient: 'from-purple-500 to-indigo-700' },
   { initials: 'CG', name: 'Christopher Gideon', role: 'Audience Growth',       dept: 'Audience Growth',       gradient: 'from-blue-600 to-sky-700' },
+  { initials: 'GP', name: 'Gideon P',           role: 'Audience Growth',       dept: 'Audience Growth',       gradient: 'from-teal-500 to-emerald-700' },
 
   // Analytics & Strategy
   { initials: 'VG', name: 'Victor Gidal',       role: 'Analytics & Strategy',  dept: 'Analytics & Strategy',  gradient: 'from-cyan-600 to-blue-700' },
@@ -201,11 +208,14 @@ export const TEAM = [
   { initials: 'MB', name: 'Mira Benett',        role: 'Analytics & Strategy',  dept: 'Analytics & Strategy',  gradient: 'from-[#2A1F15] to-[#1A1A1A]' },
   { initials: 'AE', name: 'Alex Ezekiel',       role: 'Analytics & Strategy',  dept: 'Analytics & Strategy',  gradient: 'from-teal-500 to-cyan-700' },
   { initials: 'GW', name: 'George William',     role: 'Analytics & Strategy',  dept: 'Analytics & Strategy',  gradient: 'from-indigo-500 to-blue-700' },
-  { initials: 'JW', name: 'Jake Weeks',         role: 'Analytics & Strategy',  dept: 'Analytics & Strategy',  gradient: 'from-emerald-500 to-green-700' },
+  { initials: 'JW', name: 'Jake Weeks S.',      role: 'Analytics & Strategy',  dept: 'Analytics & Strategy',  gradient: 'from-emerald-500 to-green-700' },
+  { initials: 'EG', name: 'Elliot Gray',        role: 'Analytics & Strategy',  dept: 'Analytics & Strategy',  gradient: 'from-cyan-600 to-blue-700' },
 
   // Artist Relations
   { initials: 'FM', name: 'Festus Marvy',       role: 'Artist Relations',      dept: 'Artist Relations',      gradient: 'from-orange-500 to-red-600' },
   { initials: 'JF', name: 'James Festus',       role: 'Artist Relations',      dept: 'Artist Relations',      gradient: 'from-amber-500 to-yellow-600' },
+  { initials: 'JS', name: 'James Simon',        role: 'Artist Relations',      dept: 'Artist Relations',      gradient: 'from-orange-500 to-amber-600' },
+  { initials: 'JW', name: 'Jalen Williams',     role: 'Artist Relations',      dept: 'Artist Relations',      gradient: 'from-rose-500 to-orange-600' },
 
   // Finance
   { initials: 'AT', name: 'Akeem Toheeb',       role: 'Head of Finance',       dept: 'Finance',               gradient: 'from-green-600 to-emerald-800' },
@@ -215,6 +225,7 @@ export const TEAM = [
   { initials: 'DV', name: 'Divaarosay',         role: 'Operations',            dept: 'Operations',            gradient: 'from-sky-600 to-blue-800' },
   { initials: 'EJ', name: 'Eric Jorgenson',     role: 'Operations',            dept: 'Operations',            gradient: 'from-stone-500 to-slate-700' },
   { initials: 'AL', name: 'Alex Logan',         role: 'Operations',            dept: 'Operations',            gradient: 'from-zinc-500 to-neutral-700' },
+  { initials: 'LB', name: 'Labor Bibsk',        role: 'Operations',            dept: 'Operations',            gradient: 'from-slate-500 to-zinc-700' },
 
   // Dance Department
   { initials: 'TR', name: 'Talia Rae',          role: 'Dance Promoter',        dept: 'Dance Department',      gradient: 'from-fuchsia-500 to-pink-600' },
@@ -303,7 +314,7 @@ export const REVIEWS = [
     genre: 'Trap Producer',
     date: 'January 2025',
     stars: 5,
-    text: "Second time working with Echorise. First campaign was the $100 Spotify Growth package, second time I went for Premium on a different track. Both delivered. The team know what they're doing and there's a consistency to how they work that gives you confidence.",
+    text: "Second time working with Echorise. First campaign was the Spotify Growth package, second time I went for Premium on a different track. Both delivered. The team know what they're doing and there's a consistency to how they work that gives you confidence.",
     reply: "Damien, repeat clients are the best feedback we can get. Thank you for trusting us twice — your tracks are strong and make our job easier. Here anytime for round three!",
     gradient: 'from-yellow-800 to-yellow-900',
   },
@@ -487,9 +498,9 @@ export const STATS = [
 export const PLATFORMS = ['Spotify', 'SoundCloud', 'Spotify Chart', 'Dance / TikTok', 'YouTube', 'Apple Music']
 
 // ─── VIDEO TESTIMONIALS ─────────────────────────────────────────────────────
-// Real video reviews from past clients. No names or handles are shown —
-// each entry only gets a generic "Verified Client" tag plus an optional
-// service/genre label, so no artist is identified.
+// Real video reviews from past clients. No names, handles or campaign/service
+// details are shown — every card only carries a generic "Verified Client" tag,
+// so no artist is identified.
 //
 // HOW TO ADD A VIDEO:
 //   1. Upload the video on Cloudinary. Either link works:
@@ -499,30 +510,26 @@ export const PLATFORMS = ['Spotify', 'SoundCloud', 'Spotify Chart', 'Dance / Tik
 //      b) A direct "secure_url" file link (starts with
 //         https://res.cloudinary.com/... and ends in .mp4 etc).
 //   2. Add an entry below with that URL. `id` just needs to be unique.
-//   3. `tag` and `service` are optional short labels shown on the card
-//      (e.g. 'Afrobeats Artist', 'Spotify Campaign') — leave them out (or set
-//      to '' ) if you'd rather show nothing but "Verified Client". Keep these
-//      generic (platform/genre only) — never put an artist's name or handle
-//      here, so no client is identified.
+//   3. `tag` is optional — defaults to "Verified Client".
 //   4. `poster` is optional — a thumbnail image URL shown before the video is
 //      played (ignored for Cloudinary Player embed links, which show their
 //      own preview). If omitted, the browser will just show the first frame.
 //
-// The section on the site automatically hides itself if this array is empty,
-// so it's safe to leave as-is until real links are added.
+// The section on the site automatically hides itself if this array is empty.
 export const VIDEO_TESTIMONIALS = [
   {
     id: 1,
     videoUrl: 'https://player.cloudinary.com/embed/?cloud_name=dzp83jat0&public_id=VID-20260902-WA0017_jti3ma',
     tag: 'Verified Client',
-    service: 'Spotify Campaign',
   },
   {
     id: 2,
     videoUrl: 'https://player.cloudinary.com/embed/?cloud_name=dzp83jat0&public_id=VID-20260902-WA0018_pdpzsh',
     tag: 'Verified Client',
-    service: 'Streaming Growth',
   },
-  // Example — replace/add more real Cloudinary links following the same shape:
-  // { id: 3, videoUrl: 'https://res.cloudinary.com/your-cloud/video/upload/v123/review1.mp4', tag: 'Verified Client', service: 'Spotify Campaign', poster: '' },
+  {
+    id: 3,
+    videoUrl: 'https://res.cloudinary.com/dzp83jat0/video/upload/v1789988124/WhatsApp_Video_2026-09-19_at_12.33.05_PM_hnxpkp.mp4',
+    tag: 'Verified Client',
+  },
 ]

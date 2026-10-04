@@ -1,14 +1,15 @@
 import { useState, useEffect, useRef } from 'react'
+import { Mail } from 'lucide-react'
 import { sendInvoiceEmail } from '../utils/brevo'
 import ModalPortal from './ModalPortal'
 
 const SERVICES_LIST = [
   'Spotify Promotion – Starter ($50)',
-  'Spotify Promotion – Growth ($100)',
-  'Spotify Promotion – Premium ($350)',
+  'Spotify Promotion – Growth ($150)',
+  'Spotify Promotion – Premium ($190)',
   'SoundCloud Promotion – Starter ($50)',
-  'SoundCloud Promotion – Growth ($100)',
-  'SoundCloud Promotion – Premium ($350)',
+  'SoundCloud Promotion – Growth ($150)',
+  'SoundCloud Promotion – Premium ($190)',
   'Chart Promotion – Starter ($150)',
   'Chart Promotion – Growth ($350)',
   'Chart Promotion – Premium ($650)',
@@ -282,7 +283,7 @@ export default function InvoiceModal({ open, onClose }) {
               className="w-full py-4 rounded-2xl font-display font-bold text-white transition-all hover:scale-[1.02] hover:shadow-xl disabled:opacity-60 disabled:scale-100"
               style={{ background: 'linear-gradient(135deg,#FF6A00,#ee0979)', border: 'none', cursor: 'pointer', fontFamily: 'Syne, sans-serif', letterSpacing: '-0.01em' }}
             >
-              {sending ? 'Sending via Brevo…' : '📧 Send Invoice to Artist →'}
+              {sending ? 'Sending via Brevo…' : <span className="inline-flex items-center justify-center gap-2"><Mail size={16} strokeWidth={2.2} aria-hidden="true" /> Send Invoice to Artist →</span>}
             </button>
             <p className="text-xs text-center" style={{ color: 'rgba(107,107,107,0.7)' }}>Invoice sent directly to the artist's email via Echorise Media.</p>
           </div>

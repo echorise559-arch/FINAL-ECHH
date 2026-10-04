@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Mail, FileText } from 'lucide-react'
 import { COUNTRIES } from '../data'
 import ModalPortal from './ModalPortal'
 import { notifyOwner } from '../utils/brevo'
@@ -134,7 +135,7 @@ export default function SpotifyCustomModal({ isOpen, onClose }) {
     <ModalPortal>
     <div ref={overlayRef} className="modal-overlay" onClick={e => e.target === e.currentTarget && resetAll()}>
       <div className="modal-box text-center" style={{ maxWidth: 440 }}>
-        <div className="text-5xl mb-5">📧</div>
+        <div className="mb-5 flex justify-center" style={{ color: '#FF6A00' }}><Mail size={48} strokeWidth={1.75} aria-hidden="true" /></div>
         <h2 className="font-display font-bold text-2xl mb-3 grad-text">Invoice Sent!</h2>
         <p className="text-gray-500 mb-6 text-sm">Invoice for <strong className="text-gray-900">${invoiceForm.amount.toLocaleString()}</strong> sent to <strong className="text-gray-900">{invoiceForm.email}</strong>.</p>
         <button onClick={resetAll} className="btn-primary justify-center w-full">Done →</button>
@@ -259,7 +260,7 @@ export default function SpotifyCustomModal({ isOpen, onClose }) {
             <button type="button" onClick={() => setInvoiceMode(true)}
               className="text-xs font-semibold flex items-center gap-1 px-3 py-1.5 rounded-lg transition-all hover:opacity-90"
               style={{ background: `${activeTab.color}15`, color: activeTab.color }}>
-              📄 Send Invoice
+              <FileText size={13} strokeWidth={2.2} aria-hidden="true" /> Send Invoice
             </button>
           </div>
         </form>

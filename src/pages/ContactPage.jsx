@@ -1,8 +1,10 @@
 import useSEO from '../hooks/useSEO'
+import { Mail as LucideMail, Zap } from 'lucide-react'
 import { useState } from 'react'
 import PageHero from '../components/PageHero'
 import { notifyOwner } from '../utils/brevo'
 import ContactButtons from '../components/ContactButtons'
+import CallPolicy from '../components/CallPolicy'
 
 const MailIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
@@ -82,7 +84,7 @@ export default function ContactPage() {
 
             {submitted ? (
               <div className="glass-card p-12 text-center">
-                <div className="text-5xl mb-5">✉️</div>
+                <div className="mb-5 flex justify-center" style={{ color: '#FF6A00' }}><LucideMail size={48} strokeWidth={1.75} aria-hidden="true" /></div>
                 <h3 className="font-display font-bold text-2xl mb-3" style={{ color: '#1A1A1A' }}>Message Received!</h3>
                 <p style={{ color: '#6B6B6B' }}>We'll get back to you at <strong style={{ color: '#1A1A1A' }}>{form.email}</strong> within 24 hours.</p>
                 <button onClick={() => { setSubmitted(false); setForm(INIT) }} className="btn-primary mt-6">Send Another Message</button>
@@ -134,7 +136,7 @@ export default function ContactPage() {
             </div>
 
             <div className="glass-card p-6" style={{ borderColor: 'rgba(255,106,0,0.2)', background: 'rgba(255,106,0,0.04)' }}>
-              <div className="text-lg mb-2" style={{ color: '#FF6A00' }}>⚡ Fast Response</div>
+              <div className="text-lg mb-2 flex items-center gap-2" style={{ color: '#FF6A00' }}><Zap size={18} strokeWidth={2.2} aria-hidden="true" /> Fast Response</div>
               <p className="text-sm" style={{ color: '#6B6B6B' }}>We respond to every single enquiry within 24 hours. If you don't hear from us, check your spam folder.</p>
             </div>
 
@@ -144,6 +146,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <CallPolicy showCta={false} />
     </>
   )
 }
